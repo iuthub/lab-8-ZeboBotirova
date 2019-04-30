@@ -11,6 +11,22 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/index', function () {
+    return view('blog.index');
+});
+Route::get('/post/{$id}', function ($id) {
+    return $id;
+});
+Route::group(['prefix' => 'admin'], function() {
+    Route::get(
+        return view('admin';)
+    ]);
+
+    Route::get(
+        return view('admin.create');
+    ]);
+
+    Route::post(
+    ]);
+
 });
